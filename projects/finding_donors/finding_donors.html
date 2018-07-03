@@ -13291,7 +13291,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-the Random Forest, because it has de highest Fbeta trainning score and accurace in all sizes of samples, and GaussianNB has a short time but less in other two. the Decision Tree Classifier has better time than Random forest and better Fbeta to smalls samples. So if you has small sizes of data pick Decision Tree Classifier but in our case pick Random forest</p>
+This model has a Random Forest algorithm that better explains our prospects to donate, so it's our best chance to predict if someone has an income&gt; 50MM. Random Forest uses a methodology to use several decision trees and the most frequent return it takes as the most appropriate return, as in a poll the result that leaves more wins. To understand how "voted" the result is necessary to understand how a decision tree works. A very explanatory text on the subject I found in the following link: <a href="http://dataaspirant.com/2017/05/22/random-forest-algorithm-machine-learing/">http://dataaspirant.com/2017/05/22/random-forest-algorithm-machine-learing/</a>, in summary the example they use is of a person who wants to decide where to travel and for that if you answer questions about things of the place as if you prefer beach or mountain; city or country; busy or empty place; and how the questions are answered will eliminate the possibility of places until finding the most appropriate that is a decision tree classifier. Random Forest instead of using a tree with several questions until determining the result, uses  a several diferents sequences of questions that vote in the results, and the result more voted is chosen</p>
 
 </div>
 </div>
@@ -13546,7 +13546,26 @@ Final F-score on the testing data: 0.7277
 </tbody>
 </table>
 <p>for random_state = 2</p>
+<p>for my naive model have</p>
+<table>
+<thead><tr>
+<th style="text-align:center">Metric</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Accuracy Score</td>
+<td style="text-align:center">0.2478</td>
+</tr>
+<tr>
+<td style="text-align:center">F-score</td>
+<td style="text-align:center">0.2917</td>
+</tr>
+</tbody>
+</table>
 <ul>
+<li>to compare accuracy we saw our naive model has 0.2478 and our model better than 0.83 in a unoptimized model and at least 0.858 to a opmtimize' one because has at least more TN than the naive' one. But accurary isn't quite good metric because as have been discuted is a imbalanced data so we look at F-score to get a good analise between precision and recall and our naive' score is 0.2917, it is a bad score since we get  [0:1] range, our optimized model at least 0,723 making a better score doing a good recall and precision metrics. So both metrics has range between 0 and 1 and bigger the metric better the model.</li>
 <li>for all test I had made make a better F-score than a unoptimized model and the Naive predictor firt at all because they have less false positives and true negatives making our f_beta bigger, classifing our data in a better way</li>
 </ul>
 
